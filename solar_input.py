@@ -48,13 +48,14 @@ def parse_star_parameters(line, star):
     **star** — объект звезды.
     """
 
-    star.R = line[1]
-    star.color = line[2]
-    star.m = line[3]
-    star.x = line[4]
-    star.y = line[5]
-    star.Vx = line[6]
-    star.Vy = line[7]
+    star_data = line.split()
+    star.R = float(star_data[1])
+    star.color = star_data[2]
+    star.m = float(star_data[3])
+    star.x = float(star_data[4])
+    star.y = float([5])
+    star.Vx = float(star_data[6])
+    star.Vy = float(star_data[7])
 
 
 def parse_planet_parameters(line, planet):
@@ -72,13 +73,14 @@ def parse_planet_parameters(line, planet):
     **line** — строка с описание планеты.
     **planet** — объект планеты.
     """
-    planet.R = int(line[1])
-    planet.color = int(line[2])
-    planet.m = int(line[3])
-    planet.x = int(line[4])
-    planet.y = int(line[5])
-    planet.Vx = int(line[6])
-    planet.Vy = int(line[7])
+    planet_data = line.split()
+    planet.R = float(planet_data[1])
+    planet.color = planet_data[2]
+    planet.m = float(planet_data[3])
+    planet.x = float(planet_data[4])
+    planet.y = float([5])
+    planet.Vx = float(planet_data[6])
+    planet.Vy = float(planet_data[7])
 
 
 def write_space_objects_data_to_file(output_filename, space_objects):
